@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema attributeFormDefault="unqualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="file:\Users\Ignas\Desktop\IT"
+           xmlns:sd="file:\Users\Ignas\Desktop\IT"
+           xmlns="file:\Users\Ignas\Desktop\IT"       
+           elementFormDefault="qualified">
+  <xs:element name="catalog" type="catalogType">
+    <xs:unique name="bookKey">
+      <xs:selector xpath="sd:book" />
+      <xs:field xpath="@id" />
+    </xs:unique>
+    <xs:keyref name="refBook" refer="bookKey">
+      <xs:selector xpath="sd:book" />
+      <xs:field xpath="@id" />
+    </xs:keyref>
+  </xs:element>
+
+  <xs:complexType name="authorsType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="author" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="catalogType">
+    <xs:sequence>
+      <xs:element type="bookType" name="book" maxOccurs="unbounded" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="restrictedSymbolType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="500" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="idType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="bk[0-9]{5}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="priceType">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0.99" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="listTypeInt">
+    <xs:list itemType="xs:integer" />
+  </xs:simpleType>
+
+  <xs:complexType name="titleType">
+    <xs:simpleContent>
+      <xs:extension base="restrictedSymbolType">
+        <xs:attribute name="lang" type="langType"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <!--<xs:complexType name="titleType">
+    <xs:simpleContent>
+      <xs:extension base="restrictedSymbolType">
+        <xs:attribute name="lang" type="langType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>-->
+  
+  <xs:complexType name="titleTypeNoAtributes" >
+    <xs:simpleContent>
+      <xs:restriction base="titleType">
+        <xs:attribute name="lang" type="langType" use="prohibited"/>
+      </xs:restriction>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="langType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EN" />
+      <xs:enumeration value="LT" />
+      <xs:enumeration value="RU" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="genreType">
+    <xs:restriction>
+      <xs:simpleType>
+        <xs:list>
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Action" />
+              <xs:enumeration value="Adventure" />
+              <xs:enumeration value="Computer" />
+              <xs:enumeration value="Fantasy" />
+              <xs:enumeration value="Romance" />
+              <xs:enumeration value="Horror" />
+              <xs:enumeration value="Science" />
+              <xs:enumeration value="Fiction" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:list>
+      </xs:simpleType>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="titlePage">
+    <xs:sequence>
+      <xs:choice>
+        <xs:element type="authorsType" name="authors" />
+        <xs:element type="xs:string" name="folklore" fixed="folklore" />
+        <xs:element type="xs:string" name="unknown" fixed="unknown" />
+      </xs:choice>
+      <xs:element type="titleType" name="title" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="titlePageNoAuthors">
+    <xs:complexContent>
+      <xs:restriction base="titlePage">
+        <xs:sequence>
+          <xs:choice>
+            <xs:element type="xs:string" name="folklore" fixed="folklore" />
+            <xs:element type="xs:string" name="unknown" fixed="unknown" />
+          </xs:choice>
+          <xs:element type="titleType" name="title" />
+        </xs:sequence>
+      </xs:restriction>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="openingWeekType" mixed="true">
+    <xs:sequence>
+      <xs:element type="restrictedSymbolType" name="city" />
+      <xs:element type="xs:unsignedInt" name="quantity" />
+    </xs:sequence>
+
+  </xs:complexType>
+
+  <xs:complexType name="bookType">
+    <xs:complexContent>
+      <xs:extension base="titlePage">
+        <xs:sequence>
+          <xs:element type="genreType" name="genre" />
+          <xs:element type="priceType" name="price" />
+          <xs:element type="xs:date" name="publish_date" />
+          <xs:element type="restrictedSymbolType" name="distributor" minOccurs="0" />
+          <xs:element type="restrictedSymbolType" name="description" />
+          <xs:element type="listTypeInt" name="issued" />
+          <xs:element type="openingWeekType" name="openingWeek" minOccurs="0" />
+        </xs:sequence>
+        <xs:attribute type="idType" name="id" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+</xs:schema>

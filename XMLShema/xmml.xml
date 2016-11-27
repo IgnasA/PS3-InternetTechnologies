@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<catalog
+  xmlns="file:\Users\Ignas\Desktop\IT"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="xmml11.xsd"
+>
+  <book id="bk00101">
+    <authors>
+      <author>Gambardella, Matthew</author>
+    </authors>
+    <title lang="EN">XML Developer's Guide</title>
+    <genre>Computer</genre>
+    <price>44.95</price>
+    <publish_date>2000-10-01</publish_date>
+    <description>
+      An in-depth look at creating applications
+      with XML.
+    </description>
+    <issued>1990 1995</issued>
+  </book>
+  <book id="bk00102">
+    <authors>
+      <author>Ralls, Kim</author>
+    </authors>
+    <title>Midnight Rain</title>
+    <genre>Fantasy</genre>
+    <price>5.95</price>
+    <publish_date>2000-12-16</publish_date>
+    <description>
+      A former architect battles corporate zombies,
+      an evil sorceress, and her own childhood to become queen
+      of the world.
+    </description>
+    <issued>1990 1995</issued>
+  </book>
+  <book id="bk00103">
+    <authors>
+      <author>Corets, Eva</author>
+    </authors>
+    <title>Maeve Ascendant</title>
+    <genre>Fantasy</genre>
+    <price>5.95</price>
+    <publish_date>2000-11-17</publish_date>
+    <description>
+      After the collapse of a nanotechnology
+      society in England, the young survivors lay the
+      foundation for a new society.
+    </description>
+    <issued>1990 1995</issued>
+  </book>
+  <book id="bk00104">
+    <authors>
+      <author>Corets, Eva</author>
+    </authors>
+    <title lang="EN">Oberon's Legacy</title>
+    <genre>Fantasy Adventure</genre>
+    <price>5.95</price>
+    <publish_date>2001-03-10</publish_date>
+    <description>
+      In post-apocalypse England, the mysterious
+      agent known only as Oberon helps to create a new life
+      for the inhabitants of London. Sequel to Maeve
+      Ascendant.
+    </description>
+    <issued>1990 1995</issued>
+  </book>
+  <book id="bk00105">
+    <authors>
+      <author>Corets, Eva</author>
+    </authors>
+    <title lang="EN">The Sundered Grail</title>
+    <genre>Fantasy</genre>
+    <price>5.95</price>
+    <publish_date>2001-09-10</publish_date>
+    <description>
+      The two daughters of Maeve, half-sisters,
+      battle one another for control of England. Sequel to
+      Oberon's Legacy.
+    </description>
+    <issued>1990 1995</issued>
+  </book>
+  <book id="bk00106">
+    <authors>
+      <author>Randall, Cynthia</author>
+    </authors>
+    <title lang="LT">Paukščiai</title>
+    <genre>Romance</genre>
+    <price>4.95</price>
+    <publish_date>2000-09-02</publish_date>
+    <description>
+      When Carla meets Paul at an ornithology
+      conference, tempers fly as feathers get ruffled.
+    </description>
+    <issued>1990 1995</issued>
+  </book>
+  <book id="bk00107">
+    <authors>
+      <author>Thurman, Paula</author>
+    </authors>
+    <title>Splish Splash</title>
+    <genre>Romance</genre>
+    <price>4.95</price>
+    <publish_date>2000-11-02</publish_date>
+    <description>
+      A deep sea diver finds true love twenty
+      thousand leagues beneath the sea.
+    </description>
+    <issued>1990 1995</issued>
+  </book>
+  <book id="bk00108">
+    <unknown></unknown>
+    <title>Creepy Crawlies</title>
+    <genre>Horror</genre>
+    <price>4.95</price>
+    <publish_date>2000-12-06</publish_date>
+    <distributor>American Author Association</distributor>
+    <description>
+      An anthology of horror stories about roaches,
+      centipedes, scorpions  and other insects.
+    </description>
+    <issued>1990 1995</issued>
+  </book>
+  <book id="bk00109">
+    <folklore>folklore</folklore>
+    <title>Paradox Lost</title>
+    <genre>Adventure</genre>
+    <price>6.95</price>
+    <publish_date>2000-11-02</publish_date>
+    <description>
+      After an inadvertant trip through a Heisenberg
+      Uncertainty Device, James Salway discovers the problems
+      of being quantum.
+    </description>
+    <issued>1990 1995</issued>
+  </book>
+  <book id="bk00110">
+    <authors>
+      <author>O'Brien, Tim</author>
+    </authors>
+    <title>Microsoft .NET: The Programming Bible</title>
+    <genre>Computer</genre>
+    <price>36.95</price>
+    <publish_date>2000-12-09</publish_date>
+    <description>
+      Microsoft's .NET initiative is explored in
+      detail in this deep programmer's reference.
+    </description>
+    <issued>1990 1995</issued>
+  </book>
+  <book id="bk00111">
+    <authors>
+      <author>O'Brien, Tim</author>
+    </authors>
+    <title>MSXML3: A Comprehensive Guide</title>
+    <genre>Computer</genre>
+    <price>36.95</price>
+    <publish_date>2000-12-01</publish_date>
+    <description>
+      The Microsoft MSXML3 parser is covered in
+      detail, with attention to XML DOM interfaces, XSLT processing,
+      SAX and more.
+    </description>
+    <issued>1990 1995</issued>
+    <openingWeek>
+      On the presentation day in <city>Vilnius</city> we sold <quantity>120</quantity> books!
+    </openingWeek>
+  </book>
+  <book id="bk0011">
+    <authors>
+      <author>Galos, Mike</author>
+    </authors>
+    <title>Visual Studio 7: A Comprehensive Guide</title>
+    <genre>Computer</genre>
+    <price>49.95</price>
+    <publish_date>2001-04-16</publish_date>
+    <description>
+      Microsoft Visual Studio 7 is explored in depth,
+      looking at how Visual Basic, Visual C++, C#, and ASP+ are
+      integrated into a comprehensive development
+      environment.
+    </description>
+    <issued>1990 1995</issued>
+  </book>
+</catalog>
